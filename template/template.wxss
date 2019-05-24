@@ -1,0 +1,10 @@
+.bottom-list{
+	margin: 0 50rpx;
+	font-size: 30rpx;
+}
+.dividing{
+	border: 1rpx solid #ccc;
+	/* width: 2.5rpx; */
+	height: 30rpx;
+	margin-top: 20rpx;
+}

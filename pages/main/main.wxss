@@ -1,0 +1,58 @@
+/* pages/main/main.wxss */
+@import "../../template/template.wxss";
+
+.points-name{
+	position: relative;
+	z-index: 10;
+	background-color: #ffffff;
+	height: 80rpx;
+	line-height: 80rpx;
+	display: flex;
+	justify-content: space-around;
+}
+.points-name text{
+	display: block;
+	width: 20%;
+	text-align: center;
+	font-size: 32rpx;
+}
+
+.points-name .on {
+  background: rgb(247, 104, 91);
+  color: #fff;
+}
+.more-box{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	height:auto;
+	background: #ffffff;
+	display: none;
+	padding: 20rpx 40rpx;
+	flex-wrap: wrap;
+}
+.more-box text{
+	width: 100rpx;
+	height: 100rpx;
+	line-height: 100rpx;
+	background: #cccccc;
+	border-radius: 50%;
+	margin: 30rpx;
+	font-size: 30rpx;
+	display: block;
+	text-align: center;
+}
+.bottom-box{
+	position: fixed;
+	bottom: 50rpx;
+	left: 30rpx;
+	right: 30rpx;
+	height: 70rpx;
+	line-height: 70rpx;
+	border-radius: 10rpx;
+	background: #ffffff;
+	display: flex;
+	justify-content: center;
+}

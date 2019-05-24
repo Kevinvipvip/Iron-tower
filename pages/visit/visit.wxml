@@ -1,0 +1,41 @@
+<!--pages/visit/visit.wxml-->
+<view class='container'>
+
+  <view class='route-item'>
+    <button class='btn-detail' data-id='1' bindtap='detailBoxHeight'>详情</button>
+    <text>1、推荐路线1</text>
+    <view class='item-bottom'>
+      <text>约3小时</text>
+      <text>景点数10个</text>
+    </view>
+
+  </view>
+  <view class='detail-box' style='{{num == 1?"display:block":"display:none"}}'>
+    <view class='derail-item'>
+      <text>1、东京码头</text>
+      <image src='../../images/down.png'></image>
+    </view>
+    <view class='derail-item'>
+      <text>2、福胜院</text>
+    </view>
+  </view>
+
+  <view class='route-item'>
+    <button class='btn-detail' data-id='2' bindtap='detailBoxHeight'>详情</button>
+    <text>2、推荐路线2</text>
+    <view class='item-bottom'>
+      <text>约2小时</text>
+      <text>景点数5个</text>
+    </view>
+  </view>
+
+  <view class='detail-box' style='{{num == 2?"display:block":"display:none"}}'>
+    <view class='derail-item'>
+      <text>1、开宝食坊</text>
+      <image src='../../images/down.png'></image>
+    </view>
+    <view class='derail-item'>
+      <text>2、铁塔邮驿</text>
+    </view>
+  </view>
+</view>

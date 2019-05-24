@@ -1,0 +1,6 @@
+<template name='bottomList'>
+  <view class='bottom-list' bindtap='{{clickName}}'>
+    <text>{{itemName}}</text>
+  </view>
+	<text class='dividing' wx:if='{{flag}}'></text>
+</template>

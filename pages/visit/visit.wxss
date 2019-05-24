@@ -1,0 +1,49 @@
+.route-item {
+  height: 80rpx;
+  padding: 20rpx 40rpx;
+	margin-bottom: 10rpx;
+  background: #f8f8ff;
+	overflow: hidden;
+}
+
+.route-item button {
+  float: right;
+  height: 40rpx;
+  line-height: 40rpx;
+  border: 1rpx solid #f00;
+  background: transparent;
+  border-radius: 30rpx;
+  padding: 0 30rpx;
+	margin-top: 20rpx;
+  color: #f00;
+  font-size: 24rpx;
+}
+
+.route-item text {
+  font-size: 35rpx;
+}
+
+.route-item .item-bottom {
+  display: flex;
+	margin-top: 10rpx;
+}
+
+.route-item .item-bottom text {
+  display: block;
+  margin: 0 20rpx;
+  font-size: 24rpx;
+	color: #999;
+}
+.detail-box{
+	display: none;
+	margin: 40rpx;
+}
+.detail-box text{
+	font-size: 30rpx;
+}
+.detail-box image{
+	display: block;
+	margin-left: 50rpx;
+	height: 50rpx;
+	width: 50rpx;
+}

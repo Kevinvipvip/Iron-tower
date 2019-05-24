@@ -1,0 +1,65 @@
+<view class="full-loading" wx:if="{{full_loading}}">
+  <view class="image"></view>
+</view>
+
+<view class="main" wx:else>
+  <view class="search-box">
+    <view class="search">
+      <icon class="iconfont iconsearch"/>
+      <input bindinput="bind_input" data-name="search_wd" type="digit" placeholder="搜索笔记" maxlength="8"/>
+    </view>
+  </view>
+
+  <navigator url="/pages/note-publish/note-publish" class="pub-btn">发布笔记</navigator>
+
+  <view class="list">
+    <view class="left">
+      <navigator url="/pages/note-detail/note-detail?id={{item.id}}" class="note" wx:for="{{left_note_list}}"
+                 wx:key="id">
+        <image src="{{item.pics[0]}}" mode="widthFix" lazy-load="{{true}}"></image>
+        <view class="word">
+          {{item.title}}
+        </view>
+        <view class="xia">
+          <view class="left">
+            <image src="{{item.avatar}}" class="header"></image>
+            {{item.nickname}}
+          </view>
+          <div class="right">
+            <icon class="iconfont iconxin2"/>
+            {{item.like}}
+          </div>
+        </view>
+      </navigator>
+    </view>
+    <view class="right">
+      <navigator url="/pages/note-detail/note-detail?id={{item.id}}" class="note" wx:for="{{right_note_list}}"
+                 wx:key="id">
+        <image src="{{item.pics[0]}}" mode="widthFix" lazy-load="{{true}}"></image>
+        <view class="word">
+          {{item.title}}
+        </view>
+        <view class="xia">
+          <view class="left">
+            <image src="{{item.avatar}}" class="header"></image>
+            {{item.nickname}}
+          </view>
+          <div class="right">
+            <icon class="iconfont iconxin2"/>
+            {{item.like}}
+          </div>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="nomore" wx:if="{{nomore}}">
+    已经没有更多了哦
+  </view>
+
+  <view class="nodata" wx:if="{{nodata}}">
+    暂无笔记
+  </view>
+
+  <navigator url="/pages/main/main" open-type="redirect" class="back-home">HOME</navigator>
+</view>

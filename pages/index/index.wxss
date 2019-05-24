@@ -1,0 +1,63 @@
+.survey-top-box {
+  overflow: hidden;
+  height: 157rpx;
+  background: #f8f8ff;
+}
+
+.survey-top-left {
+  float: left;
+  width: 150rpx;
+  height: 150rpx;
+  color: #fff;
+  line-height: 150rpx;
+  margin: 25rpx 0 0 25rpx;
+  font-size: 36rpx;
+  text-align: center;
+  background: rgb(255, 129, 129);
+  border-radius: 50%;
+}
+
+.survey-top-right {
+  margin-top:30rpx;
+  margin-left:39rpx;
+}
+
+.survey-top-right text {
+  font-size: 24rpx;
+  color: #f00;
+  display: block;
+  line-height: 50rpx;
+}
+
+.survey-top-right text:first-child {
+  font-size: 40rpx;
+  color: #000;
+}
+
+.survey-cont, .survey-bottom {
+  margin-top: 20rpx;
+  padding: 40rpx;
+  background: #f8f8ff;
+}
+
+.survey-cont text {
+  display: block;
+  font-size: 30rpx;
+  text-align: justify;
+}
+
+.survey-cont .survey-cont-title {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 40rpx;
+}
+
+.survey-cont .survey-cont-brief text {
+  text-indent: 2em;
+}
+
+.survey-bottom text {
+  font-size: 24rpx;
+  display: block;
+  line-height: 50rpx;
+}

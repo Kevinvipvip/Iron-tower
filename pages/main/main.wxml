@@ -1,0 +1,31 @@
+<!--pages/main/main.wxml-->
+<import src="../../template/template.wxml" />
+
+<view class='points-name'>
+  <text bindtap='choicePoint' data-name='0' class='{{pointNum==0?"on":""}}'>景点</text>
+  <text bindtap='choicePoint' data-name='1'  class='{{pointNum==1?"on":""}}'>出入口</text>
+  <text bindtap='choicePoint' data-name='2'  class='{{pointNum==2?"on":""}}'>卫生间</text>
+  <text bindtap='choicePoint' data-name='3'  class='{{pointNum==3?"on":""}}'>服务点</text>
+  <text bindtap='openMore'>更多</text>
+</view>
+<zoomImgByView id='mapLayout' img_src="{{imgSrc}}" view_width="{{viewWidth}}" view_height="{{viewHeight}}" mark_list="{{markList}}" point='{{point}}' />
+
+<view class='more-box' id='{{num}}' style='{{num == 1?"display:flex;":"display:none;"}}'>
+  <text bindtap='choicePoint' data-name='0'  class='{{pointNum==0?"on":""}}'>景点</text>
+  <text bindtap='choicePoint' data-name='1'  class='{{pointNum==1?"on":""}}'>出入口</text>
+  <text bindtap='choicePoint' data-name='2'  class='{{pointNum==2?"on":""}}'>卫生间</text>
+  <text bindtap='choicePoint' data-name='3'  class='{{pointNum==3?"on":""}}'>服务点</text>
+  <text bindtap='choicePoint' data-name='4'  class='{{pointNum==4?"on":""}}'>停车场</text>
+  <text bindtap='choicePoint' data-name='5'  class='{{pointNum==5?"on":""}}'>售票处</text>
+  <text bindtap='choicePoint' data-name='6'  class='{{pointNum==6?"on":""}}'>警务处</text>
+  <text data-name='7' class='{{pointNum==7?"on":""}}'>商场</text>
+  <text data-name='8' class='{{pointNum==8?"on":""}}'>住宿</text>
+  <text data-name='9' class='{{pointNum==9?"on":""}}'>餐厅</text>
+	<text data-name='10' class='{{pointNum==10?"on":""}}'>医务室</text>
+</view>
+
+<view class='bottom-box'>
+  <block wx:for="{{bottomList}}" wx:for-item="item" wx:key="key">
+    <template is="bottomList" data="{{...item,mode:bottomList.length}}" />
+  </block>
+</view>

@@ -1,0 +1,100 @@
+.map .mark {
+  position: absolute;
+}
+
+.map .mark > image {
+  width: 50rpx;
+  height: 70rpx;
+  vertical-align: bottom;
+}
+
+.map .mark .mark-content {
+  position: absolute;
+  padding: 20rpx;
+  border-radius: 15rpx;
+  background: #fff;
+  width: 300rpx;
+  left: -123rpx;
+  bottom: 88rpx;
+  box-sizing: border-box;
+  vertical-align: bottom;
+  word-break: break-all;
+  text-align: center;
+}
+
+.map .mark .mark-content text {
+  display: block;
+}
+
+.map .mark .mark-content .title {
+  font-weight: bold;
+  font-size: 30rpx;
+}
+
+.map .mark .mark-content .text {
+  display: -webkit-box;
+  word-break: break-all;
+  font-size: 24rpx;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.map .mark .mark-content .btn-box {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10rpx;
+}
+
+.map .mark .mark-content .btn-box text {
+  font-size: 30rpx;
+  justify-content: space-around;
+  border-radius: 25rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+	background: #47a8c0;
+	color: #fff;
+	padding: 0 24rpx;
+}
+.map .mark .mark-content .btn-box .listen{
+	background: rgb(247, 104, 91);
+}
+
+.map .mark .mark-content::after {
+  content: '';
+  border: 16rpx solid transparent;
+  border-top-color: #fff;
+  position: absolute;
+  bottom: -28rpx;
+  left: calc(50% - 16rpx);
+  vertical-align: bottom;
+}
+
+/* .map .here-tip{
+	background: #fff;
+	height: 200rpx;
+	width: 500rpx;
+	margin-top: -100rpx;
+	margin-left: -250rpx;
+	position: fixed;
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 10rpx;
+	top: 50%;
+	left: 50%;
+}
+.map .here-tip text{
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 30rpx;
+	height: 100rpx;
+	line-height: 100rpx;
+}
+.map .here-tip button{
+	height: 60rpx;
+	line-height: 60rpx;
+	font-size: 34rpx;
+} */

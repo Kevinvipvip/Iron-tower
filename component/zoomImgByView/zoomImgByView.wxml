@@ -1,0 +1,21 @@
+<!--component/zoomImgByView/zoomImgByView.wxml-->
+<view style="width:{{view_width}}px;height:{{view_height}}px;background:#eee;">
+  <image id="mapImage" style="width:{{imgWidth}}px;height:{{imgHeight}}px;position: relative;top:0px;bottom:0px;margin-top:{{marginTop}}px;margin-left:{{marginLeft}}px;" class="map" src="{{img_src}}" mode="aspectFill" catchload="_imgLoadEvent" bindtouchstart='_touchStartEvent' catchtouchmove='_touchMoveEvent' catchtouchend='_touchEndEvent' catchtouchcancel='_touchEndEvent'>
+    <view class="mark" style="left: calc({{item.coord[0]}}% - 25rpx); top: calc({{item.coord[1]}}% - 70rpx);" wx:for="{{mark_list}}" wx:key="index">
+      <image bindtap="toggle_mark_content" data-index="{{index}}" src="/images/mark.png"></image>
+      <view class="mark-content" wx:if="{{item.show}}">
+        <text class='title'>{{item.content}}</text>
+        <text class='text'>{{item.text}}</text>
+        <view class='btn-box'>
+          <text bindtap='listen' class='listen' data-point='{{point}}' data-index="{{index}}">{{palyTip}}</text>
+          <text bindtap='gotoThere' data-index="{{index}}"  data-latitude='{{item.latitude}}' data-longitude='{{item.longitude}}' data-title='{{item.content}}'>{{stop}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- <view class='here-tip' style='{{flag?"display:flex;":"display:none"}}'>
+      <text>即将打开地图</text>
+      <button catchtap='returnFalse'>取消</button>
+      <button catchtap='confirm'>确定</button>
+    </view> -->
+  </image>
+</view>
