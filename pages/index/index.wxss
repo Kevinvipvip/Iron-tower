@@ -18,8 +18,8 @@
 }
 
 .survey-top-right {
-  margin-top:30rpx;
-  margin-left:39rpx;
+  margin-top: 30rpx;
+  margin-left: 39rpx;
 }
 
 .survey-top-right text {
@@ -54,6 +54,10 @@
 
 .survey-cont .survey-cont-brief text {
   text-indent: 2em;
+}
+
+.beizhu .survey-cont-brief text {
+  text-indent: 0;
 }
 
 .survey-bottom text {

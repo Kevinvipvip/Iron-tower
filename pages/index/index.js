@@ -1,7 +1,7 @@
 var i = 1;
 var innerAudioContext = wx.createInnerAudioContext()
 innerAudioContext.loop = true;
-innerAudioContext.src = "http://www.jianghairui.com/mp3/132.mp3";
+innerAudioContext.src = "http://static.wcip.net/mp3/132.mp3";
 Page({
   data: {
     player: "语音播放"

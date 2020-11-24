@@ -13,13 +13,21 @@ Page({
   },
   onLoad() {
     this.getNoteList(() => {
-      this.setData({full_loading: false});
+      this.setData({
+        full_loading: false
+      });
     });
   },
-  onShow() {
-  },
+  onShow() {},
   bind_input(e) {
-    this.setData({ [e.currentTarget.dataset['name']]: e.detail.value || '' })
+    this.setData({
+      [e.currentTarget.dataset['name']]: e.detail.value || ''
+    })
+  },
+  getuserinfo() {
+    wx.redirectTo({
+      url: '/pages/note-publish/note-publish',
+    })
   },
   getNoteList(complete) {
     let post = {
@@ -31,10 +39,14 @@ Page({
     app.ajax(app.my_config.api + 'note/getNoteList', post, (res) => {
       if (res.list.length === 0) {
         if (this.data.page === 1) {
-          this.setData({ nodata: true });
+          this.setData({
+            nodata: true
+          });
         } else {
           app.toast('暂无更多');
-          this.setData({ nomore: true });
+          this.setData({
+            nomore: true
+          });
         }
       } else {
         for (let i = 0; i < res.list.length; i++) {
@@ -108,10 +120,11 @@ Page({
   onShareAppMessage() {
     wx.showShareMenu({
       withShareTicket: true,
-      success: function () {
-      }
+      success: function() {}
     });
 
-    return { path: app.share_path() };
+    return {
+      path: app.share_path()
+    };
   }
 })

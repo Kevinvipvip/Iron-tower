@@ -10,7 +10,7 @@
     </view>
   </view>
 
-  <navigator url="/pages/note-publish/note-publish" class="pub-btn">发布笔记</navigator>
+  <button  open-type="getUserInfo" bindgetuserinfo='getuserinfo' class="pub-btn">发布笔记</button>
 
   <view class="list">
     <view class="left">
